@@ -9,7 +9,7 @@ testsets = [
 
 for data in testsets:
     crc = binascii.crc32(data.encode('utf-8'))
-    crczlib = zlib.crc32(data.encode('utf-8'))
+    crczlib = zlib.crc32(data.encode('utf-8')) & 0xffffffff
     print("[binascii] " + data + ' : ' + hex(crc))
     print("[zlib]     " + data + ' : ' + hex(crczlib))
 
