@@ -10,7 +10,7 @@ crc_t get_crc(const unsigned char* data, size_t data_len)
     return crc;
 }
 
-void main(void)
+int main(void)
 {
     const char * data[] = {
         "ABC",
@@ -23,4 +23,5 @@ void main(void)
             get_crc(data[i], strlen(data[i]))
         );
     }
+    return 0;
 }
