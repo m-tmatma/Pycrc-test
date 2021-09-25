@@ -1,0 +1,3 @@
+[submodule "pycrc"]
+	path = pycrc
+	url = https://github.com/tpircher/pycrc.git
