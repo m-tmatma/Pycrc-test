@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import binascii
+import zlib
 
 testsets = [
     "ABC",
@@ -8,4 +9,7 @@ testsets = [
 
 for data in testsets:
     crc = binascii.crc32(data.encode('utf-8'))
-    print(data + ' : ' + hex(crc))
+    crczlib = zlib.crc32(data.encode('utf-8'))
+    print("[binascii] " + data + ' : ' + hex(crc))
+    print("[zlib]     " + data + ' : ' + hex(crczlib))
+
